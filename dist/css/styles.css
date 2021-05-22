@@ -1,0 +1,242 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  background-color: #090b1a;
+}
+
+body .wrapper {
+  color: rgba(255, 255, 255, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrapper.row-reverse .row {
+  border-radius: 20px;
+  -webkit-box-shadow: 0 16px 32px -12px rgba(0, 0, 20, 0.4);
+          box-shadow: 0 16px 32px -12px rgba(0, 0, 20, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin: 55px auto;
+  background-color: #1b1938;
+  width: 90%;
+  height: 100%;
+}
+
+body .wrapper.row-reverse .row .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+}
+
+body .wrapper.row-reverse .row .col .overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+body .wrapper.row-reverse .row .col .overlay img {
+  border-radius: 0 20px 20px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+body .wrapper.row-reverse .row .col .overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(124, 28, 222, 0.5);
+  border-radius: 0 20px 20px 0;
+}
+
+body .wrapper.row-reverse .row .col-text {
+  padding: 0.7rem 0;
+  margin: 50px auto;
+  width: 80%;
+}
+
+body .wrapper.row-reverse .row .col-text h1 {
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2.5rem;
+}
+
+body .wrapper.row-reverse .row .col-text h1 span {
+  color: #aa5cdb;
+  cursor: pointer;
+}
+
+body .wrapper.row-reverse .row .col-text p {
+  color: inherit;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.8em;
+  margin: 35px auto;
+}
+
+body .wrapper.row-reverse .row .col-text .row-stats {
+  margin: 50px 0;
+}
+
+body .wrapper.row-reverse .row .col-text .row-stats .col-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-1,
+body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-2,
+body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-3 {
+  color: white;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-1 small,
+body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-2 small,
+body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-3 small {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  body .wrapper {
+    width: 85%;
+    margin: 0 auto;
+  }
+  body .wrapper.row-reverse .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .wrapper.row-reverse .row .col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+  body .wrapper.row-reverse .row .col .overlay {
+    height: 455px;
+  }
+  body .wrapper.row-reverse .row .col .overlay img {
+    border-radius: 20px 20px 0 0;
+    height: 455px;
+  }
+  body .wrapper.row-reverse .row .col .overlay::before {
+    border-radius: 20px 20px 0 0;
+    height: 455px;
+  }
+  body .wrapper.row-reverse .row .col-text {
+    margin-top: 55px;
+    text-align: center;
+    width: 66%;
+  }
+  body .wrapper.row-reverse .row .col-text h1 {
+    font-size: 2.25rem;
+  }
+  body .wrapper.row-reverse .row .col-text p {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  body .wrapper.row-reverse .row .col-text .row-stats .col-stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-1 small,
+  body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-2 small,
+  body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-3 small {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body .wrapper {
+    width: 90%;
+  }
+  body .wrapper.row-reverse .row .col-text {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  body .wrapper {
+    width: 90%;
+  }
+  body .wrapper.row-reverse .row .col .overlay {
+    height: 350px;
+  }
+  body .wrapper.row-reverse .row .col .overlay img {
+    height: 350px;
+  }
+  body .wrapper.row-reverse .row .col .overlay::before {
+    height: 350px;
+  }
+  body .wrapper.row-reverse .row .col-text {
+    margin-top: 35px;
+  }
+  body .wrapper.row-reverse .row .col-text h1 {
+    font-size: 1.75rem;
+    width: 100%;
+  }
+  body .wrapper.row-reverse .row .col-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-1 small,
+  body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-2 small,
+  body .wrapper.row-reverse .row .col-text .row-stats .col-stats .col-3 small {
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
